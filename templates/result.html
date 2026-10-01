@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FitBuddy - Workout Plan</title>
+</head>
+
+<body>
+
+    <h1>🏋️ FitBuddy</h1>
+    <h2>Your AI Workout Plan</h2>
+
+    <p><b>Name:</b> {{ name }}</p>
+    <p><b>Age:</b> {{ age }}</p>
+    <p><b>Weight:</b> {{ weight }} kg</p>
+    <p><b>Fitness Goal:</b> {{ goal }}</p>
+    <p><b>Workout Intensity:</b> {{ intensity }}</p>
+
+    <hr>
+
+    <h2>📅 7-Day Workout Plan</h2>
+
+    <pre>{{ workout_plan }}</pre>
+<hr>
+
+<h2>💬 Give Feedback</h2>
+
+<form action="/update-plan" method="post">
+
+    <input type="hidden" name="user_id" value="{{ user_id }}">
+
+    <textarea name="feedback"
+              rows="5"
+              cols="50"
+              placeholder="Enter your feedback..."></textarea>
+
+    <br><br>
+
+    <button type="submit">Update Workout Plan</button>
+
+</form>
+    <br>
+
+    <a href="/">⬅ Back to Home</a>
+
+</body>
+
+</html>

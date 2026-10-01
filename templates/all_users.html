@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FitBuddy - All Users</title>
+</head>
+
+<body>
+
+    <h1>FitBuddy - All Users</h1>
+
+    {% for user in users %}
+
+    <hr>
+
+    <h2>{{ user.name }}</h2>
+
+    <p><b>Age:</b> {{ user.age }}</p>
+    <p><b>Weight:</b> {{ user.weight }} kg</p>
+    <p><b>Goal:</b> {{ user.goal }}</p>
+    <p><b>Intensity:</b> {{ user.intensity }}</p>
+
+    <h3>Workout Plan</h3>
+
+    <pre>{{ user.workout_plan }}</pre>
+
+    {% endfor %}
+
+</body>
+</html>
